@@ -1,0 +1,27 @@
+body{
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+
+.logo{
+	width: 301px;
+	height: 106px;
+	margin: -28px;
+	padding-bottom: 16px;
+}
+.title-text{
+	    font-size: 28px;
+    font-weight: normal;
+    line-height: 32px;
+    width: 500px;
+}
+.content{
+padding-top: 184px;
+}
+
+
+
+
+
+
