@@ -3,18 +3,19 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		{% load static %}
 		<!-- CSS only -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
 		<!-- JavaScript Bundle with Popper -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-		<link rel="stylesheet" href="login.css">
+		<link rel="stylesheet" href="{%static 'css/index.css'%} ">
 		<title>Document</title>
 	</head>
 	<body>
 		<div class="container">
 			<div class="content row">
 				<div class="col-md-7">
-					<img class="logo" src="logo.svg" alt="">
+					<img class="logo" src="{%static 'images/logo.svg'%}" alt="">
 					<h2 class="title-text">Facebook helps you connect and share with the people in your life.</h2>
 				</div>
 				<div class="col-md-5">
