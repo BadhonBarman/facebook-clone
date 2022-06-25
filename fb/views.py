@@ -15,3 +15,6 @@ def index_page(request):
 	else:
 		return render(request,"index.html")
 
+
+def user_profile(request):
+	return render(request, "profile.html")
