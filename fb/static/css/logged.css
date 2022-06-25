@@ -1,6 +1,7 @@
 body{
 	background: #242526;
 }
+
 .dark-nav{
 	background: #242526;
 padding: 4px;
@@ -8,7 +9,7 @@ border-bottom: 1px solid  #3A3B3C;}
 
 .middle .btn{
 
-width: 112px;
+width: 120px;
 height: 52px;
 padding-top: 15px;
 }
@@ -41,12 +42,13 @@ padding-top: 15px;
 	height: 100%;
 	width: 100%;
 	padding-left: 10px;
+	border-radius: 50px;
 	background: #3A3B3C;
 	border: none;
 	color: #fff;
 }
 .form-control:focus{
-	background: #3A3B3C;
+	background-color: #3A3B3C;
 	border: none;
 	box-shadow: none;
 	color: #fff;
