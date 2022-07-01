@@ -1,95 +1,85 @@
 body{
-	background: #242526;
+background: #242526;
 }
-
 .dark-nav{
-	background: #242526;
+background: #242526;
 padding: 4px;
 border-bottom: 1px solid  #3A3B3C;}
-
 .middle .btn{
-
 width: 120px;
 height: 52px;
 padding-top: 15px;
 }
 .middle .btn .svg-inline--fa{
-	height: 24px;
-	width: 24px;
-	color: #A7A9AE;
+height: 24px;
+width: 24px;
+color: #A7A9AE;
 }
 .middle .btn:hover{
-	background-color: #3A3B3C;
+background-color: #3A3B3C;
 }
 .search-box{
-	width: 280px;
-	height: 40px;
-	margin: 0;
-	padding: 0;
-		margin-left: 10px;
-	display: flex;
-	border-radius: 50px;
-	background: #3A3B3C;
+width: 280px;
+height: 40px;
+margin: 0;
+padding: 0;
+margin-left: 10px;
+display: flex;
+border-radius: 50px;
+background: #3A3B3C;
 }
 .search-box span{
-	padding-top: 10px;
-	padding-left: 15px;
+padding-top: 10px;
+padding-left: 15px;
 }
 .search-box span a{
-	color: #A7A9AE;
+color: #A7A9AE;
 }
 .form-control{
-	height: 100%;
-	width: 100%;
-	padding-left: 10px;
-	border-radius: 50px;
-	background: #3A3B3C;
-	border: none;
-	color: #fff;
+height: 100%;
+width: 100%;
+padding-left: 10px;
+border-radius: 50px;
+background: #3A3B3C;
+border: none;
+color: #fff;
 }
 .form-control:focus{
-	background-color: #3A3B3C;
-	border: none;
-	box-shadow: none;
-	color: #fff;
+background-color: #3A3B3C;
+border: none;
+box-shadow: none;
+color: #fff;
 }
 .right-side a{
-	height: 42px;
-	width: 42px;
-	margin: 0px 4px;
-	text-align: center;
-	border-radius: 50%;
-	background: #3A3B3C;
-	font-size: 19px;
-	color: #fff;
+height: 42px;
+width: 42px;
+margin: 0px 4px;
+text-align: center;
+border-radius: 50%;
+background: #3A3B3C;
+font-size: 19px;
+color: #fff;
 }
-
 .messenger-icon,
 .bell-ico{
-	padding-top: 5px;
+padding-top: 5px;
 }
 .menu-ico img{
 height: 32px;
 width: 32px;
 }
-
 svg{
-	fill: #fff;
+fill: #fff;
 }
 .user-img {
-	overflow: hidden;
+overflow: hidden;
 }
 .user-img img{
-	height: 40px;
-	width: 40px;
-	border-radius: 50%;
+height: 40px;
+width: 40px;
+border-radius: 50%;
 }
-
-
 .material-symbols-outlined{
-	font-size: 28px !important;
-	margin-top: 6px;
+font-size: 28px !important;
+margin-top: 6px;
 }
-
-
-
