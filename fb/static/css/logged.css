@@ -83,3 +83,21 @@ border-radius: 50%;
 font-size: 28px !important;
 margin-top: 6px;
 }
+
+
+
+/*tooltip custmization*/
+.tooltip-inner{
+max-width:310px;
+height: 32px;
+padding:4px 8px;
+color:#000;
+text-align:center;
+background-color:#C8C8C8;
+}
+.tooltip-arrow {
+display: none !important;
+}
+
+
+
