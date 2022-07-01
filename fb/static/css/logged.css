@@ -53,3 +53,43 @@ padding-top: 15px;
 	box-shadow: none;
 	color: #fff;
 }
+.right-side a{
+	height: 42px;
+	width: 42px;
+	margin: 0px 4px;
+	text-align: center;
+	border-radius: 50%;
+	background: #3A3B3C;
+	font-size: 19px;
+	color: #fff;
+}
+
+.messenger-icon,
+.bell-ico{
+	padding-top: 5px;
+}
+.menu-ico img{
+height: 32px;
+width: 32px;
+}
+
+svg{
+	fill: #fff;
+}
+.user-img {
+	overflow: hidden;
+}
+.user-img img{
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+}
+
+
+.material-symbols-outlined{
+	font-size: 28px !important;
+	margin-top: 6px;
+}
+
+
+
