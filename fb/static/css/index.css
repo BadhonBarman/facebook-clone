@@ -20,8 +20,8 @@ width: 500px;
 padding-top: 112px;
 }
 .txt-box{
-	padding-top: 100px;
-	margin-left: 149px;
+padding-top: 100px;
+margin-left: 149px;
 }
 .log-form{
 display: block;
@@ -33,7 +33,7 @@ background-color: #fff;
 text-align: center;
 justify-items: center;
 border-radius: 8px;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
 }
 .log-form .input{
 width: 100%;
@@ -42,7 +42,7 @@ border: 1px solid #dddfe2;
 border-radius: 6px;
 }
 .input:focus{
-	outline: none;
+outline: none;
 border-color: #1877f2;
 box-shadow: 0 0 0 2px #e7f3ff;
 caret-color: #1877f2;
@@ -65,10 +65,9 @@ width: 100% ;
 color: #fff;
 font-weight: bold;
 margin-bottom: 12px;
-
 }
 hr{
-	    margin-bottom: 24px;
+margin-bottom: 24px;
 }
 .create-btn{
 border: none;
@@ -90,13 +89,7 @@ color: #1877f2;
 font-size: 15px;
 text-decoration: none;
 }
-
 .forget-btn:hover{
 color: #1877f2;
-	text-decoration: underline;
+text-decoration: underline;
 }
-
-
-
-
-
