@@ -1,71 +1,90 @@
 {%extends 'logged_base.html'%}
 {%block body%}
 {%load static%}
-<!-- cover photo -->
-<div class="cover_photo container">
-	<div class="cover-img">
-		<image src="{%static 'images/cover.jpg'%}">
-		<button class="cover_btn"> <span><i class="fa-solid fa-camera"></i></span> Add Cover Photo</button>
-	</div>
-</div>
-<!-- end cover photo -->
-<!-- user image  <--></-->
-<div class="container user_pro">
-	<div class="row">
-		<div class="col-md-1 p-0">
-			<div class="user_avatar">
-				<image src="{%static 'images/user.jpg'%}">
-			</div>
-		</div>
-		<div class="col-md-7">
-			<div class="user_name">
-				<h2>User Name</h2>
-				<h6>100  friend</h6>
-			</div>
-		</div>
-		<div class="col-md-4">
-			<div class="top-btn">
-				<button class="story-btn"> <span><i class="fa-solid fa-circle-plus"></i></span> Add to Story</button>
-				<button class="edit-pro-btn"> <span><i class="fa-solid fa-pen"></i></span> Edit profile</button>
-			</div>
+<section class="profile_upper_main">
+	<!-- cover photo -->
+	<div class="cover_photo container">
+		<div class="cover-img">
+			{%for x in data %}
+			<image src="{{x.cover_img.url}}">
+			{%endfor%}
+			<button class="cover_btn"> <span><i class="fa-solid fa-camera"></i></span> Add Cover Photo</button>
 		</div>
 	</div>
-	<div class="user-pro-divi"><hr></div>
-	<div class="sub-nav">
-		<ul class="nav sub-nav-content">
-			<li class="nav-item">
-				<a class="nav-link" href="#">Posts</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">About</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Friends</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Photos</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Videos</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Check-ins</a>
-			</li>
-			<li class="nav-item">
-				<!-- drop menu -->
-				<div class="dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" href="#">More</a>
-					<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-						<li><a class="dropdown-item" href="#">Action</a></li>
-						<li><a class="dropdown-item" href="#">Another action</a></li>
-						<li><a class="dropdown-item" href="#">Something else here</a></li>
-					</ul>
+	<!-- end cover photo -->
+	<!-- user image  -->
+	<div class="container user_pro">
+		<div class="row">
+			<div class="col-md-1 p-0">
+				<div class="user_avatar">
+					<image src="{%static 'images/user.jpg'%}">
 				</div>
-				<!-- drop menu end -->
-			</li>
-			
-		</ul>
+			</div>
+			<div class="col-md-7">
+				<div class="user_name">
+					{%for x in data %}
+					<h2>{{x.name}}</h2>
+					{%endfor%}
+					<h6>100  friend</h6>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="top-btn">
+					<button class="story-btn"> <span><i class="fa-solid fa-circle-plus"></i></span> Add to Story</button>
+					<button class="edit-pro-btn"> <span><i class="fa-solid fa-pen"></i></span> Edit profile</button>
+				</div>
+			</div>
+		</div>
+		<div class="user-pro-divi"><hr></div>
+		<div class="sub-nav">
+			<ul class="nav sub-nav-content">
+				<li class="nav-item">
+					<a class="nav-link" href="#">Posts</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Friends</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Photos</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Videos</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Check-ins</a>
+				</li>
+				<li class="nav-item">
+					<!-- drop menu -->
+					<div class="dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" href="#">More</a>
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+						</ul>
+					</div>
+					<!-- drop menu end -->
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+	<!-- end user image -->
+</section>
+
+
+<div class="container mother_section">
+	<div class="left_portion">
+		
+	</div>
+	<div class="right_portion">
+		
 	</div>
 </div>
-<!-- end user image -->
+
+
+
 {%endblock%}

