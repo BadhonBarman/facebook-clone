@@ -198,12 +198,41 @@ padding-top: 15px;
 }
 /*........*/
 
-
-.mother_section{
-	
+.left_portion{
+	padding: 0;
 }
+.user_intro{
+	background-color: #242526;
+	color: #fff;
+	margin: 20px 0px;
+	border-radius: 8px;
+	padding: 10px;
+}
+.user_bio p{
+	text-align: center;
+}
+.user_bio .bio_btn{
+	color: #fff;
+	font-weight: 600;
+	border: none;
+	height: 36px;
+	background-color: #3A3B3C;
+}
+.user_bio .bio_btn:hover{
+	border: none;
 
-
+}
+.user_bio .bio_btn{
+	width: 100%;
+	margin-bottom: 18px;
+} 
+.upload_section{
+	background-color: #242526;
+	color: #fff;
+	border-radius: 8px;
+	margin: 20px 10px;
+	padding: 15px;
+}
 
 
 
