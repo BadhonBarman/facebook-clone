@@ -1,0 +1,14 @@
+{%extends 'logged_base.html'%}
+{%block body%}
+
+
+
+
+<script>
+	var url= window.location.pathname
+	if (url == '/home'){
+		var cls= document.getElementById('news_feed').className+=" active";
+		console.log('exicuted')
+	}
+</script>
+{%endblock%}

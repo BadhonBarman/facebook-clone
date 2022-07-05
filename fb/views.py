@@ -17,5 +17,12 @@ def index_page(request):
 
 
 def user_profile(request):
-	data=UserData.objects.all() 
+	data=UserData.objects.all()
+
+	if request.method == 'POST':
+		bio_txt=request.POST['text']
 	return render(request, "profile.html",{"data":data})
+
+
+def home(request):
+	return render(request, "home.html")

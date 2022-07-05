@@ -9,6 +9,7 @@ background: #18191A;
 .dark-nav{
 background: #242526;
 padding: 4px;
+padding-bottom: 0px;
 border-bottom: 1px solid  #3A3B3C;}
 .middle .btn{
 width: 120px;
@@ -232,20 +233,75 @@ padding-top: 15px;
 	border-radius: 8px;
 	margin: 20px 10px;
 	padding: 15px;
+	margin-right: 50px;
+}
+.status_bar{
+	display: flex;
+}
+.status_bar a img{
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
 }
 
+.status_bar .status_btn{
+	color: #B0B3B8;
+	text-align: left;
+	padding: 0px 20px;
+	height: 42px;
+	background-color:#3A3B3C;
+	width: 100%;
+	border: none;
+	margin: 0px 10px;
+	border-radius: 50px;
+}
 
+.modal-content{
+	color: #000;
+}
+.navigation ul{
+display: flex;
+list-style: none;
+margin: 0;
+}
+.navigation ul li a{
+	color: #B0B3B8;
+	border: none;
+	width: 216px;
+	height: 40px;
+	display: block;
+	text-align: center;
+}
 
+.navigation ul li a:hover{
+	background-color:#3A3B3C ;
+}
+.navigation ul li a .fa-video{
+	color: #F3425F;
+	height: 24px;
+	width: 24px;
+}
+.navigation ul li a .fa-photo-film{
+	color: #58C472;
+	height: 22px;
+	width: 22px;
+}
+.navigation ul li a .fa-flag{
+	color: #39AFD5;
+	height: 20px;
+	height: 20px;
+}
+.btn.active{
+border-bottom: 3px solid #1978f0;
+border-radius: 0;
+}
+.btn.active i{
+	color: #1978f0;
+}
+.btn.active:hover{
+	background-color: #242526;
 
-
-
-
-
-
-
-
-
-
+}
 
 
 

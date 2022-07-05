@@ -80,24 +80,88 @@
 			<div class="user_intro">
 				<h5>Intro</h5>
 				<div class="user_bio">
-					<p>more than a student</p>
-					<button class="bio_btn btn">Edit Bio</button>
-
+					{%for x in data %}
+					<p>{{x.user_bio}}</p>
+					{%endfor%}
+					
+					<button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="bio_btn btn">Edit Bio</button>
+					<!-- Modal -->
+					<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<form id="post_form">
+										{%csrf_token%}
+										<input type="text" id="text" name="text">
+										<button type="submit">save changes</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
 					<!-- more button -->
 					<button class="bio_btn btn">Edit details</button>
-
 					<button class="bio_btn btn ">Add Hobbies</button>
-
 					<button class="bio_btn btn">Add Featured</button>
-
 				</div>
-		</div>
 			</div>
+		</div>
 		<div class="col-md-8 right_portion">
 			<div class="upload_section">
-			<h2>upload</h2>
+				<div class="status_bar">
+					<a href="#"><image src="{%static 'images/user.jpg'%}"></image></a>
+
+					<button data-bs-toggle="modal" data-bs-target="#status_open" class="status_btn">What's on you mind ?</button>
+
+					<div class="modal fade" id="status_open" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="status_openLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="status_openLabel">status</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<h2>status</h2>
+									<form id="post_form">
+										{%csrf_token%}
+										<input type="text" id="text" name="text">
+										<button type="submit">save changes</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="navigation">
+					<ul>
+						<li><a class="btn" href="#"><i class="fa-solid fa-video"></i>  Live video</a></li>
+						<li><a class="btn" href="#"><i class="fa-solid fa-photo-film"></i>  Photo/video</a></li>
+						<li><a class="btn" href="#"><i class="fa-solid fa-flag"></i>  Life event</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
+<script src="{%static 'js/jquery.js'%}"></script>
+<script type="text/javascript">
+	$(document).on('submit','#post_form', function(e){
+		e.preventDefault();
+		$.ajax({
+			type:'POST',
+			url:'',
+			data:{
+				text:$('#text').val(),
+				csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+			},
+			success: function(){
+			}
+		});
+	});
+</script>
 {%endblock%}
