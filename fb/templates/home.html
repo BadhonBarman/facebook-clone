@@ -1,9 +1,36 @@
 {%extends 'logged_base.html'%}
 {%block body%}
+{%load static%}
+<div class="row">
+	<div class="col-md-3">
+		<div class="left_navigation">
 
+			<button><span><img src="{%static 'images/user.jpg'%}" alt=""></span> User name</button>
+			
+			<button><span><img src="{%static 'images/findfriends.png'%}" alt=""></span> Find Friends</button>
 
+			<button><span><img src="{%static 'images/groups.png'%}" alt=""></span> Groups</button>
 
+			<button><img src="{%static 'images/marketplace.png'%}" alt=""></span> Marketplace</button>
 
+			<button><img src="{%static 'images/watch.png'%}" alt=""></span> Watch</button>
+
+			<button><span><img src="{%static 'images/memories.png'%}" alt=""></span> Memories</button>
+
+			<button><img src="{%static 'images/saved.png'%}" alt=""></span> Saved</button>
+			
+			<button><img src="{%static 'images/pages.png'%}" alt=""></span> Pages</button>
+
+			<button><span><img src="{%static 'images/events.png'%}" alt=""></span> Events</button>
+
+			<button><span><img src="{%static 'images/mostrecent.png'%}" alt=""></span> Most recent</button>
+
+			<button><span><img src="{%static 'images/favourites.png'%}" alt=""></span> Favourites</button>
+		</div>
+	</div>
+	<div class="col-md-6"></div>
+	<div class="col-md-3"></div>
+</div>
 <script>
 	var url= window.location.pathname
 	if (url == '/home'){

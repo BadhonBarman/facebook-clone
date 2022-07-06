@@ -25,4 +25,5 @@ def user_profile(request):
 
 
 def home(request):
-	return render(request, "home.html")
+	data=UserData.objects.all()
+	return render(request, "home.html",{"data":data})
