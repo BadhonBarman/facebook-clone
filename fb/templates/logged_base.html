@@ -43,7 +43,7 @@
 					<a class="bell-ico" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Notifications " href="#"><i class="fa-solid fa-bell"></i></a>
 
 					<!-- user image -->
-					<a class="user-img" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Your profile" href="#"><image src="{%static 'images/user.jpg'%}"></image></a>
+					<a class="user-img" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Your profile" href="/profile"><image src="{%static 'images/user.jpg'%}"></image></a>
 				</div>
 			</div>
 		</nav>
@@ -51,7 +51,7 @@
 		<!-- navigation end -->
 		{%block body%}{%endblock%}
 		<!-- JavaScript Bundle with Popper -->
-		
+		<script src="{%static 'js/jquery.js'%}"></script>
 		<script src="{%static 'js/bootstrap.bundle.js'%}"></script>
 		<script src="{%static 'js/all.js'%}"></script>
 		<script src="{%static 'js/custom.js'%}"></script>

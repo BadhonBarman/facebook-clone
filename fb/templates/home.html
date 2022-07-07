@@ -11,31 +11,92 @@
 
 			<button><span><img src="{%static 'images/groups.png'%}" alt=""></span> Groups</button>
 
-			<button><img src="{%static 'images/marketplace.png'%}" alt=""></span> Marketplace</button>
+			<button><span><img src="{%static 'images/marketplace.png'%}" alt=""></span> Marketplace</button>
 
-			<button><img src="{%static 'images/watch.png'%}" alt=""></span> Watch</button>
+			<button><span><img src="{%static 'images/watch.png'%}" alt=""></span> Watch</button>
 
-			<button><span><img src="{%static 'images/memories.png'%}" alt=""></span> Memories</button>
+			<button><span><span><img src="{%static 'images/memories.png'%}" alt=""></span> Memories</button>
 
-			<button><img src="{%static 'images/saved.png'%}" alt=""></span> Saved</button>
+			<button><span><img src="{%static 'images/saved.png'%}" alt=""></span> Saved</button>
 			
-			<button><img src="{%static 'images/pages.png'%}" alt=""></span> Pages</button>
+			<button><span><img src="{%static 'images/pages.png'%}" alt=""></span> Pages</button>
 
 			<button><span><img src="{%static 'images/events.png'%}" alt=""></span> Events</button>
 
 			<button><span><img src="{%static 'images/mostrecent.png'%}" alt=""></span> Most recent</button>
 
 			<button><span><img src="{%static 'images/favourites.png'%}" alt=""></span> Favourites</button>
+
+			<!-- see more -->
+			<button type="button" data-bs-toggle="collapse" data-bs-target="#moreBtn"> <span style="height: 36px;width: 36px;display: inline-block;text-align: center;background: #303031;border-radius: 50%;padding-top: 6px;"><i class="fa-solid fa-angle-down"></i></span> See more <span></span></button>
+
+			<div  id="moreBtn" class="collapse ">
+				<button>Ad centre</button>
+			</div>
+
 		</div>
 	</div>
-	<div class="col-md-6"></div>
+	<div class="col-md-6">
+		<div class="middle_feed_portion">
+			<div class="story_portion">
+				<div class="create_story">
+					<div class="col-1 add_ico">
+						<span><i class="fa-solid fa-circle-plus" style="height:35px; color: #228AFF; "></i></span>
+					</div>
+
+					<div class="col-11 p-0 ">
+						<h5>Create Story</h5> 
+					<p>Share a photo or write something.</p>
+				</div>
+				</div>
+			</div>
+			<!--  -->
+			<div class="status_post_box">
+				<div class="upload_section" style="margin-right: 0;">
+				<div class="status_bar">
+					<a href="#"><image src="{%static 'images/user.jpg'%}"></image></a>
+					<button data-bs-toggle="modal" data-bs-target="#status_open" class="status_btn">What's on your mind, User?</button>
+					<div class="modal fade" id="status_open" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="status_openLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="status_openLabel">status</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<h2>status</h2>
+									<form id="post_form">
+										{%csrf_token%}
+										<input type="text" id="text" name="text">
+										<button type="submit">save changes</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="navigation">
+					<ul>
+						<li><a class="btn" href="#"><i class="fa-solid fa-video"></i>  Live video</a></li>
+						<li><a class="btn" href="#"><i class="fa-solid fa-photo-film"></i>  Photo/video</a></li>
+						<li><a class="btn" href="#"><i class="fa-solid fa-flag"></i>  Life event</a></li>
+					</ul>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
 	<div class="col-md-3"></div>
 </div>
 <script>
+
 	var url= window.location.pathname
 	if (url == '/home'){
 		var cls= document.getElementById('news_feed').className+=" active";
 		console.log('exicuted')
 	}
+
 </script>
+
 {%endblock%}
