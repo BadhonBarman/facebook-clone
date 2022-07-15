@@ -17,8 +17,46 @@
 					<input class="input pass" name="user_pass" placeholder="Password" aria-label="Password"type="password" required><br>
 					<button class="button" type="submit">Log In</button><br>
 					<a href="#" class="forget-btn">Forgotten password?</a><br><hr>
-					<button class="create-btn"><a href="profile">Create New Account</a></button>
+					<button class="create-btn"  data-bs-toggle="modal" data-bs-target="#create_form">Create New Account</button>
 				</form>
+			</div>
+			<div class="modal fade" id="create_form" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="status_openLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<div class="modal_content_ttl d-block">
+								<h2 class="m-0">Sign Up</h2>
+								<p>It's quick and easy.</p>
+							</div>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<form action=".">
+								<div class="input_grp">
+									<div class="row">
+										<div class="col-6 p-1"><input class="sign_up_inp" type="text" placeholder="First name"></div>
+										<div class="col-6 p-1"><input class="sign_up_inp" type="text" placeholder="Last name"></div>
+										<div class="col-12 p-0"><input class="sign_up_inp" type="text" placeholder="Mobile number or email address"></div>
+										<div class="col-12 p-0"><input class="sign_up_inp" type="password" placeholder="New password"></div>
+										<div class="col-12">
+											<select id="birthDay">
+												<option value="0">Day</option>
+											</select>
+											<select id="birthMonth">
+												<option value="0">Month</option>
+											</select>
+											<select id="birthYear">
+												<option value="0">Year</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								
+								<button class="btn btn-success" type="submit">Sign Up</button>
+							</form>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

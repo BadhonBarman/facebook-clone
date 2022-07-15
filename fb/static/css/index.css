@@ -93,3 +93,13 @@ text-decoration: none;
 color: #1877f2;
 text-decoration: underline;
 }
+/*--------*/
+.sign_up_inp{
+width: 100%;
+height: 40px;
+border-radius: 5px;
+border: 1px solid #CCD0D5;
+padding: 10px 5px;
+margin-bottom: 10px;
+background-color: #F5F6F7;
+}
