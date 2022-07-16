@@ -103,3 +103,14 @@ padding: 10px 5px;
 margin-bottom: 10px;
 background-color: #F5F6F7;
 }
+.sign_up_modal{
+	width: 455px;
+}
+.input_grp{
+	padding: 13px;
+	padding-top: 0;
+}
+.birthINFO select{
+height: 36px;
+width: 125px;
+}

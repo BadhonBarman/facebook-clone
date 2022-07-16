@@ -22,7 +22,7 @@
 			</div>
 			<div class="modal fade" id="create_form" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="status_openLabel" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered">
-					<div class="modal-content">
+					<div class="modal-content sign_up_modal">
 						<div class="modal-header">
 							<div class="modal_content_ttl d-block">
 								<h2 class="m-0">Sign Up</h2>
@@ -30,29 +30,53 @@
 							</div>
 							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 						</div>
-						<div class="modal-body">
-							<form action=".">
+						<div class="modal-body ">
+							<form action="#">
 								<div class="input_grp">
 									<div class="row">
 										<div class="col-6 p-1"><input class="sign_up_inp" type="text" placeholder="First name"></div>
 										<div class="col-6 p-1"><input class="sign_up_inp" type="text" placeholder="Last name"></div>
 										<div class="col-12 p-0"><input class="sign_up_inp" type="text" placeholder="Mobile number or email address"></div>
 										<div class="col-12 p-0"><input class="sign_up_inp" type="password" placeholder="New password"></div>
-										<div class="col-12">
-											<select id="birthDay">
-												<option value="0">Day</option>
+										<div class="col-12 p-0 birthINFO">
+											<p>Date of birth</p>
+											<select id="birthDay">	
 											</select>
 											<select id="birthMonth">
-												<option value="0">Month</option>
+												<option value="1">Jan</option>
+												<option value="2">Feb</option>
+												<option value="3">Mar</option>
+												<option value="4">Apr</option>
+												<option value="5">May</option>
+												<option value="6">Jun</option>
+												<option value="7">Jul</option>
+												<option value="8">Aug</option>
+												<option value="9">Sep</option>
+												<option value="10">Oct</option>
+												<option value="11">Nov</option>
+												<option value="12">Dec</option>
 											</select>
-											<select id="birthYear">
-												<option value="0">Year</option>
+											<select id="birthYear">	
 											</select>
+										</div>
+										<div class="col-12 p-0">
+											<p>Gender</p>
+											<span><label>Female</label>
+											<input name="gender" type="radio"></span>
+
+											<span><label>Male</label>
+											<input name="gender" type="radio"></span>
+
+											<span><label>Custom</label>
+											<input name="gender" type="radio"></span>
 										</div>
 									</div>
 								</div>
+								<div class="text-center">
+									<button class="btn btn-success" type="submit">Sign Up</button>
+								</div>
 								
-								<button class="btn btn-success" type="submit">Sign Up</button>
+								
 							</form>
 						</div>
 					</div>
@@ -61,4 +85,5 @@
 		</div>
 	</div>
 </div>
+<script src="{%static 'js/jquery.js'%}"></script>
 {%endblock%}
