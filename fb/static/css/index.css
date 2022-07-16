@@ -113,4 +113,18 @@ background-color: #F5F6F7;
 .birthINFO select{
 height: 36px;
 width: 125px;
+border: 1px solid #CCD0D5;
+border-radius: 5px;
+margin-left: 10px;
+}
+
+.gender_box label{
+    height: 36px;
+    width: 125px;
+    border: 1px solid #CCD0D5;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.sub_decs p{
+font-size: 12px;
 }
