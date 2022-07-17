@@ -12,3 +12,12 @@ class UserData(models.Model):
 	def register(self):
 		self.save()
 
+class User(models.Model):
+	user_name= models.CharField(max_length=100, default='')
+	user_mobile= models.CharField(max_length=100, default='')
+	user_signuppass= models.CharField(max_length=100, default='')
+	user_dateOFbirth= models.CharField(max_length=100, default='')
+	user_gender= models.CharField(max_length=100, default='')
+
+	def register(self):
+		self.save()

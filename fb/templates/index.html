@@ -31,18 +31,22 @@
 							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 						</div>
 						<div class="modal-body ">
-							<form action="#">
+							<form action="." method="POST">
+								{%csrf_token%}
 								<div class="input_grp">
 									<div class="row">
-										<div class="col-6 p-1"><input class="sign_up_inp" type="text" placeholder="First name"></div>
-										<div class="col-6 p-1"><input class="sign_up_inp" type="text" placeholder="Last name"></div>
-										<div class="col-12 p-0"><input class="sign_up_inp" type="text" placeholder="Mobile number or email address"></div>
-										<div class="col-12 p-0"><input class="sign_up_inp" type="password" placeholder="New password"></div>
+										<div class="col-6 p-1"><input class="sign_up_inp" type="text" name="firstname" placeholder="First name"></div>
+
+										<div class="col-6 p-1"><input class="sign_up_inp" type="text" name="surname" placeholder="Surname"></div>
+
+										<div class="col-12 p-0"><input class="sign_up_inp" type="text" name="mobile"  placeholder="Mobile number or email address"></div>
+
+										<div class="col-12 p-0"><input class="sign_up_inp" name="signuppass"  type="password" placeholder="New password"></div>
 										<div class="col-12 p-0 birthINFO">
 											<p>Date of birth</p>
-											<select class="m-0" id="birthDay">	
+											<select class="m-0" name="birthday" id="birthDay">	
 											</select>
-											<select id="birthMonth">
+											<select name="birthmonth" id="birthMonth">
 												<option value="1">Jan</option>
 												<option value="2">Feb</option>
 												<option value="3">Mar</option>
@@ -56,19 +60,19 @@
 												<option value="11">Nov</option>
 												<option value="12">Dec</option>
 											</select>
-											<select id="birthYear">	
+											<select name="birthyear" id="birthYear">	
 											</select>
 										</div>
 										<div class="col-12 p-0 gender_box">
 											<p>Gender</p>
 											<span><label>Female
-											<input name="gender" type="radio"></label></span>
+											<input name="gender" value="Female" type="radio"></label></span>
 
 											<span><label>Male
-											<input name="gender" type="radio"></label></span>
+											<input name="gender" value="male" type="radio"></label></span>
 
 											<span><label>Custom
-											<input name="gender" type="radio"></label></span>
+											<input name="gender" value="custom" type="radio"></label></span>
 										</div>
 									</div>
 								</div>
