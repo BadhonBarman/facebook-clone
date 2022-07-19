@@ -5,7 +5,7 @@ class AdminUserData(admin.ModelAdmin):
     list_display = ['name', 'password','cover_img','user_bio']
 
 class AdminUser(admin.ModelAdmin):
-    list_display = ['user_name', 'user_mobile','user_signuppass','user_dateOFbirth','user_gender']
+    list_display = ['user_name', 'user_phone','user_signuppass','user_dateOFbirth','user_gender']
 
 admin.site.register(UserData, AdminUserData)
 admin.site.register(User, AdminUser)

@@ -6,7 +6,11 @@
 	<div class="cover_photo container">
 		<div class="cover-img">
 			{%for x in data %}
+			{% if x.cover_img %}
 			<image src="{{x.cover_img.url}}">
+			{% else %}
+			<image src="{%static 'images/default_cover.jpg'%}">
+			{% endif %}
 			{%endfor%}
 			<button class="cover_btn"> <span><i class="fa-solid fa-camera"></i></span> Add Cover Photo</button>
 		</div>
@@ -23,7 +27,7 @@
 			<div class="col-md-7">
 				<div class="user_name">
 					{%for x in data %}
-					<h2>{{x.name}}</h2>
+					<h2>{{x.user_name}}</h2>
 					{%endfor%}
 					<h6>100  friend</h6>
 				</div>

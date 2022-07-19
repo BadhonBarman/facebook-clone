@@ -7,16 +7,16 @@ def index_page(request):
 	if request.method == 'GET':
 		return render(request,"index.html")
 	else:
-
 		#log in info
-		user_name= request.POST.get("user_name")
+		user_phone= request.POST.get("user_phone_number")
 		user_pass= request.POST.get("user_pass")
+		if user_phone:
+			get_user= User.login_user_by_phone(user_phone)
 
-		if user_name and user_pass:
-			user_data = UserData(name=user_name,password=user_pass)
-			user_data.register()
-			print(user_name)
-			return redirect('profile')
+			if get_user:
+				request.session['name']=get_user.user_name
+				request.session['phone']=get_user.user_phone
+				return redirect('profile') 
 		else:
 			# sign up info 
 			user_firstname = request.POST.get("firstname")
@@ -36,7 +36,7 @@ def index_page(request):
 
 			print(user_dateOFbirth)
 			# store sign up data to DB
-			new_user_data=User(user_name=user_fullname,user_mobile=user_mobile,user_signuppass=user_signuppass,user_dateOFbirth=user_dateOFbirth,user_gender=user_gender)
+			new_user_data=User(user_name=user_fullname,user_phone=user_mobile,user_signuppass=user_signuppass,user_dateOFbirth=user_dateOFbirth,user_gender=user_gender)
 			new_user_data.register()
 
 		return render(request,"index.html")
@@ -44,7 +44,8 @@ def index_page(request):
 
 
 def user_profile(request):
-	data=UserData.objects.all()
+	user_phone_id = request.session['phone']
+	data=User.objects.filter(user_phone=user_phone_id)
 
 	if request.method == 'POST':
 		bio_txt=request.POST['text']

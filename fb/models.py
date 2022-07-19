@@ -14,10 +14,18 @@ class UserData(models.Model):
 
 class User(models.Model):
 	user_name= models.CharField(max_length=100, default='')
-	user_mobile= models.CharField(max_length=100, default='')
+	user_phone= models.CharField(max_length=100, default='')
 	user_signuppass= models.CharField(max_length=100, default='')
 	user_dateOFbirth= models.CharField(max_length=100, default='')
 	user_gender= models.CharField(max_length=100, default='')
+	cover_img= models.ImageField(upload_to="images", default='',blank=True)
 
 	def register(self):
 		self.save()
+
+	@staticmethod
+	def login_user_by_phone(user_phone):
+		try:
+			return User.objects.get(user_phone = user_phone)
+		except:
+			return False
