@@ -3,22 +3,8 @@ from django.http import HttpResponse
 from .models import*
 
 def index_page(request):
+	return render(request,"index.html")
 
-	if request.method == 'GET':
-		return render(request,"index.html")
-	else:
-		#log in info
-		user_phone= request.POST.get("user_phone_number")
-		user_pass= request.POST.get("user_pass")
-		error_txt =None
-		get_user= User.login_user_by_phone(user_phone)
-
-		if get_user:
-			request.session['name']=get_user.user_name
-			request.session['phone']=get_user.user_phone
-			return redirect('profile') 
-		else:
-			print("restriction working")
 
 def SignUp(request):
 	#sign up info 
@@ -42,14 +28,26 @@ def SignUp(request):
 	return redirect('index')
 
 
-
 def user_profile(request):
+	if request.method =='POST':
+		user_phone= request.POST.get("user_phone_number")
+		user_pass= request.POST.get("user_pass")
+		error_txt =None
+		get_user= User.login_user_by_phone(user_phone)
+
+		if get_user:
+			if user_pass == get_user.user_signuppass:
+				request.session['name']=get_user.user_name
+				request.session['phone']=get_user.user_phone
+				return redirect('profile')
+			else:
+				pass 
+		else:
+			print("restriction working")
+
 	user_phone_id = request.session['phone']
 	data=User.objects.filter(user_phone=user_phone_id)
-
-	if request.method == 'POST':
-		bio_txt=request.POST['text']
-	return render(request, "profile.html",{"data":data})
+	return render(request, "profile.html",{"data":data})	
 
 
 def home(request):

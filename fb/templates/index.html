@@ -11,7 +11,7 @@
 		</div>
 		<div class="col-md-5">
 			<div class="log-form">
-				<form action="." method="POST">
+				<form action="/profile" method="POST">
 					{%csrf_token%}
 					<input class="input" name="user_phone_number" type="text" placeholder="Email address or phone number" aria-label="Email address or phone number" required><br>
 					<input class="input pass" name="user_pass" placeholder="Password" aria-label="Password"type="password" required><br>
